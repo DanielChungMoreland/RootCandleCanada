@@ -143,3 +143,31 @@
         }
     }
 }
+
+.ContactInfo {
+    display: flex;  
+    justify-content: space-evenly;
+    background-color:  #eee2c8;
+    
+    br {
+        display: none;
+    }
+    i {
+        font-size: .8rem;
+    }
+    li {
+        a {
+            font-size: .8rem;
+        }
+    }
+}
+
+.Weblinks {
+    float: left;
+    display: inline-flex;
+    li {
+        padding: 1rem 0.78571rem !important;
+    }
+}
+
+
