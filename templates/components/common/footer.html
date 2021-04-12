@@ -21,17 +21,8 @@
 <footer class="footer" role="contentinfo">
     <h2 class="footer-title-sr-only">{{lang 'footer.title'}}</h2>
     <div class="container">
-        {{#if theme_settings.social_icon_placement_bottom '!==' 'bottom_none'}}
-            <article class="footer-info-col
-                footer-info-col--social
-                footer-info-col--{{#if theme_settings.social_icon_placement_bottom '===' 'bottom_left'}}left{{else}}right{{/if}}"
-                data-section-type="footer-webPages">
-                    <h3 class="footer-info-heading">{{lang 'social.connect'}}</h3>
-                    {{> components/common/social-links}}
-            </article>
-        {{/if}}
         <section class="footer-info">
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+            <!-- <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
                 <h3 class="footer-info-heading">{{lang 'footer.navigate'}}</h3>
                 <ul class="footer-info-list">
                     {{#each pages}}
@@ -43,7 +34,7 @@
                         <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
                     </li>
                 </ul>
-            </article>
+            </article> -->
 
             <article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
                 <h3 class="footer-info-heading">{{lang 'footer.categories'}}</h3>
@@ -56,7 +47,13 @@
                 </ul>
             </article>
 
-            {{#and theme_settings.shop_by_brand_show_footer shop_by_brand.length}}
+            <article class="footer-info-col"
+                data-section-type="footer-webPages">
+                    <h3 class="footer-info-heading">{{lang 'social.connect'}}</h3>
+                    {{> components/common/social-links}}
+            </article>
+
+            <!-- {{#and theme_settings.shop_by_brand_show_footer shop_by_brand.length}}
             <article class="footer-info-col footer-info-col--small" data-section-type="footer-brands">
                 <h3 class="footer-info-heading">{{lang 'footer.brands'}}</h3>
                 <ul class="footer-info-list">
@@ -68,17 +65,7 @@
                     <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
                 </ul>
             </article>
-            {{/and}}
-
-            {{#if settings.address}}
-            <article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
-                <h3 class="footer-info-heading">{{lang 'footer.info'}}</h3>
-                <address>{{nl2br settings.address}}</address>
-                {{#if settings.phone_number}}
-                    <strong>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
-                {{/if}}
-            </article>
-            {{/if}}
+            {{/and}} -->
 
             <article class="footer-info-col" data-section-type="newsletterSubscription">
                 {{#if settings.show_newsletter_box}}
@@ -87,6 +74,21 @@
                 {{> components/common/payment-icons}}
             </article>
         </section>
+        <article class="navPages-action contact-info-footer">
+            <span>{{nl2br settings.address}}</span>
+            {{#if settings.phone_number}}
+                <span><strong>{{settings.phone_number}}</strong></span>
+            {{/if}}
+        </article>
+        <article class = "webpage-links">
+            {{#unless theme_settings.hide_content_navigation}}
+                {{#each pages}}
+                        <li>
+                            <a class="navPages-action" href="{{url}}">{{name}}</a>
+                        </li>
+                    {{/each}}
+            {{/unless}}
+        </article>
         {{#if theme_settings.geotrust_ssl_common_name}}
             <div class="footer-geotrust-ssl-seal">
                 {{> components/common/geotrust-ssl-seal}}
@@ -97,14 +99,10 @@
             <p class="paypal-credit">{{nl2br settings.paypal_commerce_credit_message}}</p>
         </div>
         {{/if}}
-        {{#if theme_settings.show_powered_by}}
-            <div class="footer-copyright">
-                <p class="powered-by">{{lang 'footer.powered_by'}} <a href="https://www.bigcommerce.com?utm_source=merchant&amp;utm_medium=poweredbyBC" rel="nofollow">BigCommerce</a></p>
-            </div>
-        {{/if}}
+
         {{#if theme_settings.show_copyright_footer}}
             <div class="footer-copyright">
-                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
+                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} ~ All Rights Reserved </p>
             </div>
         {{/if}}
     </div>

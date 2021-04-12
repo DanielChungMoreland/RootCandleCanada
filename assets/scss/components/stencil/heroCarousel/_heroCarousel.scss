@@ -64,6 +64,7 @@
         }
     }
     .slick-dots {
+        position: relative;
         bottom: spacing("third");
 
         @include breakpoint("medium") {

@@ -102,6 +102,40 @@
     color: $footer-heading-fontColor;
     font-size: fontSize("base");
     text-transform: inherit;
+    border-bottom: 1px dotted grey;
+}
+.contact-info-footer {
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px dotted grey;
+    width: 100%;
+    font-weight: lighter;
+    br {
+        display: none;
+    }
+    span + span {
+        margin-left: 10px;
+    }
+}
+
+.webpage-links {
+    width: 100%;
+    border-bottom: 1px dotted grey;
+    padding: 10px 0px 10px 0px;
+    list-style-type: none;
+    display: inline-flex;
+    color: grey;
+    margin-bottom: 10px;
+    li + li {
+        border-left: 1px solid grey;
+        padding-left: 10px;
+    }
+    li {
+        a {
+            color: grey;
+            padding: 0px 10px 0px 0px;
+            font-weight: lighter;
+        }
+    }
 }
 
 .footer-info-list {

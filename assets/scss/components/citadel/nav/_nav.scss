@@ -166,7 +166,16 @@
     float: left;
     display: inline-flex;
     li {
-        padding: 1rem 0.78571rem !important;
+        margin: 1rem 0.78571rem !important;
+        a {
+            text-decoration: none;
+            padding-left: 1rem;
+            color: grey;
+        }
+    }
+    li + li {
+        border-left: 1px solid grey;
+        padding-left: 1rem;
     }
 }
 

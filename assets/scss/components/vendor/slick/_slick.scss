@@ -21,6 +21,7 @@
     @include carouselOpaqueBackgrounds($slick-arrow-bgColor);
     z-index: 1;
     border: 1px solid $slick-arrow-borderColor;
+    border-radius: 100%;
     height: remCalc(61px);
     margin-top: -(remCalc(15px));
     padding: remCalc(10px);
@@ -207,6 +208,7 @@ div.slick-slider {
         &:before,
         &:after {
             display: block;
+            
         }
     }
 
@@ -240,7 +242,7 @@ div.slick-slider {
         &:before,
         &:after {
             right: 50%;
-            transform: translateX(50%);        
+            transform: translateX(50%);       
         }
 
         &:before {
@@ -254,7 +256,7 @@ div.slick-slider {
 // -----------------------------------------------------------------------------
 
 .carousel-play-pause-button {
-    display: none;
+    display: none !important;
     position: absolute;
     left: 15px;
     bottom: spacing("third");
