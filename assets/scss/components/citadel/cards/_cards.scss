@@ -80,6 +80,7 @@
 .card-title {
     font-size: $card-title-fontSize;
     margin: $card-title-margin;
+    text-align: center;
 
     > a {
         color: $card-title-color;
@@ -95,6 +96,7 @@
 
 .card-text {
     margin-bottom: $card-text-marginBottom;
+    text-align: center;
 
     abbr {
         border: 0;

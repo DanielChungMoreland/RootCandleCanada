@@ -24,9 +24,12 @@
 }
 
 body {
-    background: url(../../../img/bg-images/honeycombpattern.png) repeat scroll center top white !important;
+    background: url("https://cdn6.bigcommerce.com/s-0c81hg/product_images/uploaded_images/honeycombpattern.png?t=1500319912&_ga=2.256742863.535207059.1500302543-384297285.1492612894") repeat scroll center top #fff !important;
 }
 
+#main-content {
+    margin-bottom: 0px;
+}
 
 // Doing all my scss changes in here for now
 
