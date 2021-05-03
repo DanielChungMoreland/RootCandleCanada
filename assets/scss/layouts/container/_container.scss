@@ -58,3 +58,35 @@ body {
     text-align: center;
     padding: 5px;
 }
+
+// Button styling
+
+.add-to-cart-button {
+
+    background-color: #e69138;
+    outline-color: #e69138;
+    border: 1px #fff dashed;
+    color: #fff;
+    padding: 5px;
+    margin: 10px;
+    text-transform: uppercase;
+    box-shadow: 0 0 0 5px #e69138;
+    &:hover {
+        background-color: lightgrey;
+        box-shadow: 0 0 0 5px lightgrey;
+    }
+}
+
+.quickview-button {
+    height: 80px;
+    width: 80px;
+    background: grey;
+    border-radius: 100%;
+    box-shadow: 0 0 0 5px grey;
+    border: dashed 1px white;
+    color: white;
+    &:hover {
+        background: lightgrey;
+        box-shadow: 0 0 0 5px lightgrey;
+    }
+}
