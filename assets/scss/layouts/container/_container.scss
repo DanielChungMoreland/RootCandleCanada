@@ -15,3 +15,42 @@
         padding: 0 ($container-padding * 4);
     }
 }
+
+.container-main-page {
+    width: 1100px;
+    margin: 0 auto;
+    background: none repeat scroll 0 0 #fff;
+    border: 0 solid #d8d8d8;
+}
+
+body {
+    background: url(../../../img/bg-images/honeycombpattern.png) repeat scroll center top white !important;
+}
+
+
+// Doing all my scss changes in here for now
+
+.subcategory-grid {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
+}
+
+.subcategory-header-image {
+    height: 100%;
+    width: 100%;
+}
+
+.subcategory-container {
+    height: 150px;
+
+}
+.subcategory-label {
+    position: relative;
+    background: black;
+    bottom: 30px;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
