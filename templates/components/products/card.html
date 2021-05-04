@@ -60,9 +60,9 @@
                 {{#unless hide_product_quick_view}}
                     {{#if theme_settings.show_product_quick_view}}
                         {{#if settings.data_tag_enabled}}
-                            <button class="button button--small card-figcaption-button quickview-button" data-event-type="product-click" data-product-id="{{id}}">{{lang 'products.quick_view'}}</button>
+                            <button class="button button--small card-figcaption-button quickview quickview-button" data-event-type="product-click" data-product-id="{{id}}">{{lang 'products.quick_view'}}</button>
                         {{else}}
-                            <button class="button button--small card-figcaption-button quickview-button" data-product-id="{{id}}">{{lang 'products.quick_view'}}</button>
+                            <button class="button button--small card-figcaption-button quickview quickview-button" data-product-id="{{id}}">{{lang 'products.quick_view'}}</button>
                         {{/if}}
                     {{/if}}
                 {{/unless}}
@@ -92,18 +92,20 @@
         {{/and}}
         {{#if brand.name}}
         {{/if}}
-        <h3 class="card-title">
-            <a aria-label="{{name}},{{> components/products/product-aria-label}}"
-               href="{{url}}"
-               {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>{{name}}</a>
-        </h3>
-
-        <div class="card-text" data-test-info-type="price">
-            {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-                {{> components/products/price price=price}}
-            {{else}}
-                {{> components/common/login-for-pricing}}
-            {{/or}}
+        <div class="card-product-info">
+            <h3 class="card-title">
+                <a aria-label="{{name}},{{> components/products/product-aria-label}}"
+                   href="{{url}}"
+                   {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>{{name}}</a>
+            </h3>
+    
+            <div class="card-text" data-test-info-type="price">
+                {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                    {{> components/products/price price=price}}
+                {{else}}
+                    {{> components/common/login-for-pricing}}
+                {{/or}}
+            </div>
         </div>
         {{> components/products/bulk-discount-rates}}
         {{#if add_to_cart_url }}
