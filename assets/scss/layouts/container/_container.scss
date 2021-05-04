@@ -90,3 +90,27 @@ body {
         box-shadow: 0 0 0 5px lightgrey;
     }
 }
+
+.banners {
+    @media (min-width: 801px) {
+        margin: auto;
+        padding: 0;
+        width: 1100px;
+        background-color: #fff;
+    }
+}
+.hide-on-desktop {
+    @media (min-width: 801px) {
+        display: none
+    }
+}
+
+.hide-on-mobile {
+    @media (max-width: 800px) {
+        display: none
+    }
+}
+
+.card-product-info {
+    height:100px;
+}
