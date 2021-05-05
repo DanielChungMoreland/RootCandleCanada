@@ -17,14 +17,18 @@
 }
 
 .container-main-page {
-    width: 1100px;
-    margin: 0 auto;
-    background: none repeat scroll 0 0 #fff;
-    border: 0 solid #d8d8d8;
+    @media screen and (min-width: 801px) {
+        width: 1100px;
+        margin: 0 auto;
+        background: none repeat scroll 0 0 #fff;
+        border: 0 solid #d8d8d8;
+    }
 }
 
 body {
-    background: url("https://cdn6.bigcommerce.com/s-0c81hg/product_images/uploaded_images/honeycombpattern.png?t=1500319912&_ga=2.256742863.535207059.1500302543-384297285.1492612894") repeat scroll center top #fff !important;
+    @media screen and (min-width: 801px) {
+        background: url("https://cdn6.bigcommerce.com/s-0c81hg/product_images/uploaded_images/honeycombpattern.png?t=1500319912&_ga=2.256742863.535207059.1500302543-384297285.1492612894") repeat scroll center top #fff !important;
+    }
 }
 
 #main-content {
