@@ -1,39 +1,41 @@
 <nav class="navUser">
     {{> components/common/currency-selector}}
-    <div class="Menu">
-        <ul class=ContactInfo>
-            <i class="navPages-action">
-                {{nl2br settings.address}}
-                {{#if settings.phone_number}}
-                    <strong>{{settings.phone_number}}</strong>
-                {{/if}}
-            </i>
-            {{#unless theme_settings.hide_content_navigation}}
-                {{#each pages}}
-                        <li>
-                            <a class="navPages-action" href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-            {{/unless}}
+    <div class="hide-on-mobile">
+        <div class="Menu">
+            <ul class=ContactInfo>
+                <i class="navPages-action">
+                    {{nl2br settings.address}}
+                    {{#if settings.phone_number}}
+                        <strong>{{settings.phone_number}}</strong>
+                    {{/if}}
+                </i>
+                {{#unless theme_settings.hide_content_navigation}}
+                    {{#each pages}}
+                            <li>
+                                <a class="navPages-action" href="{{url}}">{{name}}</a>
+                            </li>
+                        {{/each}}
+                {{/unless}}
+            </ul>
+        </div>
+        <ul class="Weblinks">
+            <li>
+                <a href="/store-hours/">
+                    <span>Hours</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.beeculture.com">
+                    <span>Bee Culture</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.rootcandleschurch.com">
+                    <span>Church Candles</span>
+                </a>
+            </li>
         </ul>
     </div>
-    <ul class="Weblinks">
-        <li>
-            <a href="/store-hours/">
-                <span>Hours</span>
-            </a>
-        </li>
-        <li>
-            <a href="http://www.beeculture.com">
-                <span>Bee Culture</span>
-            </a>
-        </li>
-        <li>
-            <a href="http://www.rootcandleschurch.com">
-                <span>Church Candles</span>
-            </a>
-        </li>
-    </ul>
     <ul class="navUser-section navUser-section--alt">
         {{#if customer.store_credit.value '>' 0}}
             <li class="navUser-item">
