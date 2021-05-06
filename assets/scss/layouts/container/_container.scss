@@ -81,6 +81,19 @@ body {
     }
 }
 
+.not-online-box {
+    background: grey;
+    color: white;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    &:hover{
+        background: grey;
+        color:white;
+        cursor:default;
+    }
+}
+
 .quickview-button {
     height: 80px;
     width: 80px;

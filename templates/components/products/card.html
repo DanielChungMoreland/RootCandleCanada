@@ -111,6 +111,10 @@
         {{#if add_to_cart_url }}
             <a href="{{add_to_cart_url}}" data-event-type="product-click" data-button-type="add-cart" class="button button--small card-figcaption-button add-to-cart-button">{{lang 'products.add_to_cart'}}</a>
             <span class="product-status-message aria-description--hidden">{{lang 'category.add_cart_announcement'}}</span>
+        {{else}}
+            <div class="not-online-box button button--small card-figcaption-button">
+                No Online Purchase
+            </div>
         {{/if}}
     </div>
 </article>
