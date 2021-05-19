@@ -26,14 +26,13 @@
 }
 
 body {
-    @media screen and (min-width: 801px) {
-        background: url("https://cdn6.bigcommerce.com/s-0c81hg/product_images/uploaded_images/honeycombpattern.png?t=1500319912&_ga=2.256742863.535207059.1500302543-384297285.1492612894") repeat scroll center top #fff !important;
-    }
+    // @media screen and (min-width: 801px) {
+    //     background: url("https://cdn6.bigcommerce.com/s-0c81hg/product_images/uploaded_images/honeycombpattern.png?t=1500319912&_ga=2.256742863.535207059.1500302543-384297285.1492612894") repeat scroll center top #fff !important;
+    // }
 }
 
 #main-content {
     margin-bottom: 0px;
-    padding-bottom:75px;
 }
 
 // Doing all my scss changes in here for now
@@ -111,7 +110,6 @@ body {
 .banners {
     @media (min-width: 801px) {
         margin: auto;
-        padding: 0;
         width: 1100px;
         background-color: #fff;
     }

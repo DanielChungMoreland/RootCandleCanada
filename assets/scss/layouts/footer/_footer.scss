@@ -33,23 +33,11 @@
     font-size: 0; // 1
 }
 
-// .footer-social-media {
-//     @media (min-width: 801px) {
-//         width: 50% !important;
-//     }
-// }
-
 .footer-subscription {
     @media (max-width: 800px){
         width: 100% !important;
     }
 }
-
-// .footer-categories {
-//     @media (min-width: 801px) {
-//         width: 50% !important;
-//     }
-// }
 
 .footer-info-col {
     @include grid-column(12);
